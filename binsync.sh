@@ -23,7 +23,7 @@ for file_type in "${allowed_types[@]}" ; do
      if [[ ! -e "$HOME/bin/$binary" && ! -L "$HOME/bin/$binary" ]] ; then
        # If no corresponding link/file for a NON-executable script
        echo -e "\033[33m\033\tnot added:  $binary\033[0m"
-      fi 
+      fi
     fi
   done
 done
