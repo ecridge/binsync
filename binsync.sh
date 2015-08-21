@@ -16,13 +16,13 @@ for file_type in "${allowed_types[@]}" ; do
       if [[ ! -e "$HOME/bin/$binary" && ! -L "$HOME/bin/$binary" ]] ; then
         # If no corresponding link/file in ~/bin for an EXECUTABLE script
         ln -rs "$script" "$HOME/bin/$binary"
-        echo -e "\033[32m\033\tadded:      $binary\033[0m"
+        echo -e "\033[32m\tadded:      $binary\033[0m"
         (( additions++ ))
       fi
     else
      if [[ ! -e "$HOME/bin/$binary" && ! -L "$HOME/bin/$binary" ]] ; then
        # If no corresponding link/file for a NON-executable script
-       echo -e "\033[33m\033\tnot added:  $binary\033[0m"
+       echo -e "\033[33m\tnot added:  $binary\033[0m"
       fi
     fi
   done
@@ -37,13 +37,13 @@ for link in ~/bin/* ; do
     if [[ ! -x "$link" ]] ; then
       # If there is a link in ~/bin to a NON-executable
       rm "$link"
-      echo -e "\033[31m\033\tdeleted:    $binary\033[0m"
+      echo -e "\033[31m\tdeleted:    $binary\033[0m"
       (( deletions++ ))
     fi
   else
     # If link in ~/bin is orphaned
     rm "$link"
-    echo -e "\033[31m\033\tdeleted:    $binary\033[0m"
+    echo -e "\033[31m\tdeleted:    $binary\033[0m"
     (( deletions++ ))
   fi
 done
