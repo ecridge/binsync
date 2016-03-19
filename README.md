@@ -23,27 +23,27 @@ Installation
 1. Create `~/bin` and `~/src` if you don't have them already:
    
    ```
-   $ mkdir ~/bin ~/src && chmod 700 ~/bin ~/src
+   mkdir ~/bin ~/src && chmod 700 ~/bin ~/src
    ```
 
    Hide them from Finder on OS X:
 
    ```
-   $ chflags hidden ~/bin ~/src
+   chflags hidden ~/bin ~/src
    ```
 
 2. Make sure that `~/bin` is in your PATH – run `echo $PATH | grep -c ~/bin`
    and check for a `1`. If you get `0`, you can add it using:
 
    ```bash
-   $ echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc && source ~/.bashrc
+   echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc && source ~/.bashrc
    ```
 
 3. Save `binsync.sh` into `~/src` and make it executable:
    
    ```
-   $ cd ~/src && curl -sSL cridge.co/1dWPW6p -o binsync.sh
-   $ chmod +x binsync.sh
+   cd ~/src && curl -sSL cridge.co/1dWPW6p -o binsync.sh
+   chmod +x binsync.sh
    ```
 
 4. Run `./binsync.sh` to invoke *binsync* for the first time. *binsync* will
@@ -59,7 +59,7 @@ Installation
    terminal window:
 
    ```bash
-   $ echo 'binsync > /dev/null' >> ~/.bashrc
+   echo 'binsync > /dev/null' >> ~/.bashrc
    ```
 
 License
