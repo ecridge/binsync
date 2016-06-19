@@ -4,7 +4,7 @@
 
 shopt -s nullglob  # Don’t take ‘*’ literally if there are no matches.
 
-allowed_types=( sh rb )
+allowed_types=( pl py rb sh )
 
 (( additions = 0, deletions = 0 ))
 
